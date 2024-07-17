@@ -1,4 +1,24 @@
 {
+
+    "compilerOptions": {
+      "target": "es6",
+      "lib": ["dom", "es6"],
+      "jsx": "react",
+      "module": "commonjs",
+      "allowJs": true,
+      "checkJs": false,
+      "esModuleInterop": true,
+      "skipLibCheck": true,
+      "strict": true,
+      "forceConsistentCasingInFileNames": true,
+      "moduleResolution": "node",
+      "resolveJsonModule": true,
+      "isolatedModules": true,
+      "noEmit": true
+    },
+    "include": ["src"],
+
+
   "files": [],
   "references": [
     {

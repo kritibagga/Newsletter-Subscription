@@ -1,11 +1,8 @@
-import "./App.css";
+import React from "react";
+import NewsletterBanner from "./Components/NewsletterBanner.tsx";
 
-function App() {
-	return (
-		<>
-			<h1>Hello World</h1>
-		</>
-	);
-}
+const App: React.FC = () => {
+	return <NewsletterBanner />;
+};
 
 export default App;
