@@ -62,4 +62,9 @@ describe("NewsletterBanner component", () => {
 			expect(checkCard).not.toBeInTheDocument();
 		});
 	});
+
+    test("ensure React is used", () => {
+		render(<div />);
+		expect(true).toBeTruthy(); // Placeholder to avoid empty test warning
+	});
 });

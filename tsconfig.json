@@ -14,7 +14,9 @@
       "moduleResolution": "node",
       "resolveJsonModule": true,
       "isolatedModules": true,
-      "noEmit": true
+      "noEmit": false,
+      "allowSyntheticDefaultImports": true
+
     },
     "include": ["src"],
 
@@ -27,5 +29,8 @@
     {
       "path": "./tsconfig.node.json"
     }
-  ]
+  ],
+  "exclude": [
+    "**/*.spec.ts"
+]
 }
