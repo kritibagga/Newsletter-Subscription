@@ -47,7 +47,7 @@ describe("NewsletterBanner component", () => {
 				"Subscription Successful!"
 			);
 			expect(successMessage).toBeInTheDocument();
-		});
+		},{timeout:2000});
 	});
 
 	test("closes the newsletter banner when close button is clicked", async () => {

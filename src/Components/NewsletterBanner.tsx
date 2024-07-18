@@ -3,6 +3,7 @@ import Loader from "../assets/loaderCount1.gif";
 
 const NewsletterBanner: React.FC = () => {
 	const [email, setEmail] = useState<string>("");
+	const [loading, setLoading] = useState<boolean>(false);
 	const [message, setMessage] = useState<boolean>(false);
 	const [error, setError] = useState<string>("");
 	const [showcard, setShowcard] = useState<boolean>(true);
@@ -17,7 +18,11 @@ const NewsletterBanner: React.FC = () => {
 			setError("Please enter a valid email address.");
 			return;
 		}
-		setMessage(true);
+		setLoading(true);
+
+		setTimeout((): void => {
+			setMessage(true);
+		}, 1000);
 	};
 
 	const validateEmail = (email: string): boolean => {
@@ -82,7 +87,7 @@ const NewsletterBanner: React.FC = () => {
 										<button
 											type='submit'
 											className='bg-pureBlack hover:bg-primary text-white py-2 px-4 rounded-lg mt-2 focus:outline-none focus:shadow-outline w-full'>
-											Subscribe
+											{loading ? "Subscribing..." : "Subscribe"}
 											<span className='fa-solid fa-paper-plane ml-2'></span>
 										</button>
 									</div>
@@ -90,7 +95,7 @@ const NewsletterBanner: React.FC = () => {
 							)}
 						</form>
 						{message && (
-							<div className='flex flex-col items-center w-full'>
+							<div className='flex flex-col items-center w-full mb-8'>
 								<img
 									className='mr-2 size-12'
 									src={Loader}
